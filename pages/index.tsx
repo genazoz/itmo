@@ -137,7 +137,6 @@ const Home: NextPage<CatalogProps> = ({data, messages}) => {
     </Title>
     {
       data?.news ? <Wrapper>
-        <Pagination currentPage={data.page} newsPerPage={data.per_page} countOfPages={data.last_page} onPageChange={(num) => changeCurrentPage(num)}/>
         <NewsList>
           {data.news.map((newsObj, index) => <NewsCard articlesObj={
             {
